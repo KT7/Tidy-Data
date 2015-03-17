@@ -13,14 +13,6 @@ subtrain<-read.csv("subject_train.txt",header=FALSE,col.names="subject") #subjec
 ytrain<-read.csv("Y_train.txt",header=FALSE,col.names="activity") #activity codes for test set
 ytest<-read.csv("Y_test.txt",header=FALSE,col.names="activity")   #activity codes for train set
 
-#ytrain_lab<-as.data.frame(merge(ytrain,act,by="activity",sort=FALSE)[,2]) #labeled activities ordered by training data
-#ytest_lab<-as.data.frame(merge(ytest,act,by="activity",sort=FALSE)[,2]) #labeled activities ordered by training data
-#colnames(ytest_lab)<-"activity"   #gives correct column name
-#colnames(ytrain_lab)<-"activity"  #gives correct column name
-
-#xts<-cbind(subtest,ytest_lab,xtest) #combines subject number, labeled activity, and test data by column
-#xtr<-cbind(subtrain,ytrain_lab,xtrain) #combines subject number, labeled activity, and train data by column
-
 xts<-cbind(subtest,ytest,xtest) 
 xtr<-cbind(subtrain,ytrain,xtrain)
 
